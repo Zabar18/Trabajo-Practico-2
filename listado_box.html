@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Catálogo - escudos argentinos</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <header>
+    <a href="Idex.html" class="back-btn">⬅ Volver al inicio</a>
+    <h1>Catálogo</h1>
+    <p>Modelos en goma, madera y tela bordada</p>
+    <input type="text" id="buscador" placeholder="Buscar club...">
+  </header>
+
+  <div class="container grid">
+    <div class="card">
+      <img src="Default.jpg" alt="Boca Juniors">
+      <div class="club">Boca Juniors</div>
+      <div class="material">Goma – 7 cm</div>
+      <div class="descripcion">Escudo económico y liviano en goma.</div>
+    </div>
+
+    <div class="card">
+      <img src="Default.jpg" alt="River Plate">
+      <div class="club">River Plate</div>
+      <div class="material">Madera – 12 cm</div>
+      <div class="descripcion">Escudo artesanal y resistente en madera.</div>
+    </div>
+
+    <div class="card">
+      <img src="Default.jpg" alt="Independiente">
+      <div class="club">Independiente</div>
+      <div class="material">Tela Bordada – 5 cm</div>
+      <div class="descripcion">Escudo coleccionable en tela bordada.</div>
+    </div>
+
+    <div class="card">
+      <img src="Default.jpg" alt="Racing Club">
+      <div class="club">Racing Club</div>
+      <div class="material">Madera – 12 cm</div>
+      <div class="descripcion">Escudo artesanal en madera pintada.</div>
+    </div>
+
+    <div class="card">
+      <img src="Default.jpg" alt="San Lorenzo">
+      <div class="club">San Lorenzo</div>
+      <div class="material">Goma – 7 cm</div>
+      <div class="descripcion">Escudo económico y liviano en goma.</div>
+    </div>
+  </div>
+  
+  <script>
+    document.getElementById("buscador").addEventListener("keyup", function() {
+      const filtro = this.value.toLowerCase();
+      document.querySelectorAll(".card, .box").forEach(card => {
+        const nombre = card.querySelector(".club").textContent.toLowerCase();
+        card.style.display = nombre.includes(filtro) ? "" : "none";
+      });
+    });
+  </script>
+</body>
+</html>
