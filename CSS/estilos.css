@@ -18,14 +18,28 @@ body {
   font-family: Inter, Arial, sans-serif;
   background: var(--card);
   color: var(--ink);
-  margin: 0;
+  min-height: 100vh;
+}
+
+.site-title {
+  color: var(--blanco);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 15px;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
 
 header {
+  position: relative;
   background: linear-gradient(90deg, var(--azul-osc), var(--azul));
   color: var(--blanco);
-  padding: 20px;
+  padding: 60px 20px 20px; 
   text-align: center;
+  border-bottom: none;
+  z-index: 1;
+  overflow: visible;
 }
 
 h1, h2 {
@@ -126,6 +140,10 @@ p {
   transition: background 0.2s;
 }
 
+.submit-btn:hover {
+  background: #1f4e70;
+}
+
 .back-btn {
   position: absolute;
   top: 18px;
@@ -136,33 +154,13 @@ p {
   border-radius: 8px;
   font-size: 14px;
   text-decoration: none;
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(255, 255, 255,0.4);
   transition: all 0.2s ease;
 }
 
 .back-btn:hover {
   background: var(--blanco);
   color: var(--azul-osc);
-}
-
-
-header {
-  position: relative;
-  background: linear-gradient(90deg, var(--azul-osc), var(--azul));
-  color: var(--blanco);
-  padding: 40px 20px 20px;
-  text-align: center;
-  border-bottom: none;
-}
-
-
-.back-btn:hover {
-  background: var(--blanco);
-  color: var(--azul-osc);
-}
-
-.submit-btn:hover {
-  background: #1f4e70;
 }
 
 .mini-card {
@@ -216,6 +214,30 @@ footer {
   text-align: center;
 }
 
+#buscador {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 25px;
+  outline: none;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  margin: 20px auto;
+  display: block;
+}
+
+#buscador:focus {
+  border-color: var(--azul-osc);
+  box-shadow: 0 4px 10px rgba(43,111,159,0.2);
+}
+
+#buscador::placeholder {
+  color: #999;
+  font-style: italic;
+}
+
 @media (max-width: 600px) {
   .container {
     padding: 10px;
@@ -230,28 +252,3 @@ footer {
     height: 80px;
   }
 }
-
-#buscador {
-  width: 100%;              
-  max-width: 400px;        
-  padding: 10px 15px;      
-  font-size: 16px;         
-  border: 2px solid #ccc;   
-  border-radius: 25px;      
-  outline: none;            
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
-  transition: all 0.3s ease; 
-  margin: 20px auto;        
-  display: block;           
-}
-
-#buscador:focus {
-  border-color: var(--azul-osc);              
-  box-shadow: 0 4px 10px rgba(43,111,159,0.2); 
-}
-
-#buscador::placeholder {
-  color: #999;
-  font-style: italic;
-}
-
