@@ -5,9 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Mini escudos argentinos hechos a mano. Ideal para colecciones, souvenirs y regalos patrios. Envíos a todo el país." />
   <link rel="stylesheet" href="CSS/estilos.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/easyzoom/2.5.0/easyzoom.css">
+
   <title>Escudos Argentinos — Mini escudos y souvenires</title>
 </head>
 <body>
@@ -27,34 +26,44 @@
       <div>
         <span class="eyebrow">Edición limitada • Inspirado en la tradición</span>
         <h1>Mini escudos argentinos — la pasión en la palma de tu mano</h1>
-        <p class="lead">Escudos de goma, madera o tela bordada en venta, fabricados de manera artesanal. Perfectos para colecciones, regalos y decoraciones.</p>
+        <p class="lead">Escudos de goma, madera o tela bordada en venta, fabricados de manera artesanal.</p>
 
         <div class="features">
           <div class="feature">Tamaños: 4–12 cm</div>
           <div class="feature">Materiales: Goma, madera o tela</div>
         </div>
 
-        <div class="strip">
-          <div class="mini-card">
-            <img src="Styles/Independiente.jpg" alt="Escudo madera de Independiente"/>
-            <small>Escudo madera • 12 cm</small>
+      <div class="strip">
+
+        <div class="mini-card zoom-card">
+          <div class="easyzoom easyzoom--overlay">
+            <a href="Img/Independiente.jpg">
+              <img src="Img/Independiente.jpg" alt="Escudo madera de Independiente">
+            </a>
           </div>
-          <div class="mini-card">
-            <img src="Styles/Boca.jpg" alt="Escudo goma de Boca"/>
-            <small>Escudo goma • 7 cm</small>
-          </div>
-          <div class="mini-card">
-            <img src="Styles/River.jpg" alt="Escudo tela de River"/>
-            <small>Escudo tela • 5 cm</small>
-          </div>
+          <small>Escudo madera • 12 cm</small>
         </div>
 
-        <div class="trust">
-          <div>✔ Envíos a toda la provincia de Misiones</div>
-          <div>✔ Producción responsable</div>
-          <div>✔ Calidad garantizada</div>
+        <div class="mini-card zoom-card">
+          <div class="easyzoom easyzoom--overlay">
+            <a href="Img/Boca.jpg">
+              <img src="Img/Boca.jpg" alt="Escudo goma de Boca">
+            </a>
+          </div>
+          <small>Escudo goma • 7 cm</small>
         </div>
+
+        <div class="mini-card zoom-card">
+          <div class="easyzoom easyzoom--overlay">
+            <a href="Img/River.jpg">
+              <img src="Img/River.jpg" alt="Escudo tela de River">
+            </a>
+          </div>
+          <small>Escudo tela • 5 cm</small>
+        </div>
+
       </div>
+
     </section>
 
     <section id="productos" style="margin-top:28px"></section>
@@ -67,6 +76,13 @@
     </div>
   </footer>
 
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/easyzoom/2.5.0/easyzoom.js"></script>
+  <script src="JS/plugin.js"></script>
+
 </body>
 </html>

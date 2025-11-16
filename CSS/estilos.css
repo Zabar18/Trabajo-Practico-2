@@ -252,3 +252,34 @@ footer {
     height: 80px;
   }
 }
+
+.zoom-card {
+  position: relative;
+  overflow: visible !important; 
+
+  .zoom-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+  }
+
+  .easyzoom-flyout {
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+    width: 200px !important;
+    height: 200px !important;
+    border-radius: 8px;
+    background: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+  }
+
+  .strip {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 25px;
+}
+}
